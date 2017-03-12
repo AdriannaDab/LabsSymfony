@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="label.id">
+                <source>label.id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="label.url">
+                <source>label.url</source>
+                <target>URL</target>
+            </trans-unit>
+            <trans-unit id="message.empty_list">
+                <source>message.empty_list</source>
+                <target>Pusta lista</target>
+            </trans-unit>
+            <trans-unit id="tags.id">
+                 <source>tags</source>
+                 <target>Tagi</target>
+            </trans-unit>
+            <trans-unit id="title.bookmark.id">
+                <source>title.bookmark</source>
+                <target>Tytuł zakładki</target>
+            </trans-unit>
+            <trans-unit id="title.bookmarks.id">
+                <source>title.bookmarks</source>
+                <target>Tytuły zakładek</target>
+            </trans-unit>
+            <trans-unit id="welcome.id">
+                <source>Welcome!</source>
+                <target>Witaj!</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

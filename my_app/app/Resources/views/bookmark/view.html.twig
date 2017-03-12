@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>{{ 'title.bookmark'|trans }}</h1>
+
+    {% if bookmark is defined and bookmark|length %}
+
+        <h2>{{ 'label.id'|trans  }}:</h2>
+            <p> {{ id }} </p>
+        <h2>{{ 'label.url'|trans }}:</h2>
+            <p> {{ bookmark.url }} </p>
+        <h2>{{ 'tags'|trans }}:</h2>
+        {% for tag in bookmark.tags %}
+            <p>{{ tag|comma }}</p>
+        {% endfor %}
+
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+
+{% endblock %}
+
+

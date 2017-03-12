@@ -3,6 +3,8 @@
  * Bookmark repository.
  */
 namespace AppBundle\Repository;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Pagerfanta;
 
 /**
  * Class BookmarkRepository.
@@ -64,6 +66,20 @@ class BookmarkRepository
     {
         return isset($this->bookmarks[$id]) && count($this->bookmarks)
             ? $this->bookmarks[$id] : null;
+    }
+
+    /**
+     * @param int $page
+     *
+     * @return Pagerfanta
+     */
+    public function findLatest($page = 1)
+    {
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($this->queryLatest(), false));
+        $paginator->setMaxPerPage(Post::NUM_ITEMS);
+        $paginator->setCurrentPage($page);
+
+        return $paginator;
     }
 }
 

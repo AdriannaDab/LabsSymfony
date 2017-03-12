@@ -8,8 +8,6 @@ namespace AppBundle\Controller;
 use AppBundle\Repository\BookmarkRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Pagerfanta\Adapter\ArrayAdapter;
-use Pagerfanta\Pagerfanta;
 
 /**
  * Class BookmarkController.
@@ -30,6 +28,7 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
      *     name="bookmark_index"
      * )
      */
+
     public function indexAction()
     {
         $bookmarks = $this->get('app.repository.bookmark')->findAll();
@@ -71,11 +70,11 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
      *     name="bookmark_index_paginated",
      * )
      * @Method("GET")
-     *//**
+     */
+    /**
     public function indexAction($page)
     {
-        $bookmarkRepository = new BookmarkRepository();
-        $bookmarks = $bookmarkRepository->findAll();
+        $bookmarks = $this->get('app.repository.bookmark')->findAll()->findLatest($page);
 
         return $this->render(
             'bookmark/index.html.twig',

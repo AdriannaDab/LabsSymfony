@@ -32,6 +32,17 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
      */
     public function indexAction()
     {
+        $bookmarks = $this->get('app.repository.bookmark')->findAll();
+
+        return $this->render(
+            'bookmark/index.html.twig',
+            ['bookmarks' => $bookmarks]
+        );
+    }
+
+    /**
+    public function indexAction()
+    {
         $bookmarkRepository = new BookmarkRepository();
         $bookmarks = $bookmarkRepository->findAll();
 
@@ -40,8 +51,7 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
             ['bookmarks' => $bookmarks]
         );
     }
-
-
+     **/
 
     /**
      * Index action.
@@ -86,8 +96,8 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
      */
     public function viewAction($id)
     {
-        $bookmarkRepository = new BookmarkRepository();
-        $bookmark = $bookmarkRepository->findOneById($id);
+
+        $bookmark = $this->get('app.repository.bookmark')->findOneById($id);
 
         return $this->render(
             'bookmark/view.html.twig',

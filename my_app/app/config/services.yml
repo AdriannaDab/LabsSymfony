@@ -12,3 +12,7 @@ services:
         public: false
         tags:
             - { name: twig.extension }
+
+# app/config/services.yml
+    app.repository.bookmark:
+        class: AppBundle\Repository\BookmarkRepository

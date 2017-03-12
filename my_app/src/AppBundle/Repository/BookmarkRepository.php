@@ -66,3 +66,4 @@ class BookmarkRepository
             ? $this->bookmarks[$id] : null;
     }
 }
+

@@ -22,12 +22,13 @@
             {% endfor %}
             </dl>
         {% endfor %}
-       {# {% if bookmarks.haveToPaginate %}
+
+        {% if bookmarks.haveToPaginate %}
             <div class="navigation text-center">
                 {{ pagerfanta(bookmarks, 'twitter_bootstrap3_translated', { routeName: 'bookmark_index_paginated' }) }}
             </div>
         {% endif %}
-        #}
+
 
     {% else %}
         <p>

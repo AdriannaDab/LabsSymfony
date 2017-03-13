@@ -6,6 +6,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Repository\BookmarkRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -28,7 +29,7 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
      *     name="bookmark_index"
      * )
      */
-
+/*
     public function indexAction()
     {
         $bookmarks = $this->get('app.repository.bookmark')->findAll();
@@ -38,7 +39,7 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
             ['bookmarks' => $bookmarks]
         );
     }
-
+*/
     /**
     public function indexAction()
     {
@@ -71,17 +72,17 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
      * )
      * @Method("GET")
      */
-    /**
+
     public function indexAction($page)
     {
-        $bookmarks = $this->get('app.repository.bookmark')->findAll()->findLatest($page);
+        $bookmarks = $this->get('app.repository.bookmark')->findAll($page);
 
         return $this->render(
             'bookmark/index.html.twig',
             ['bookmarks' => $bookmarks]
         );
     }
-    **/
+
 
     /**
      * View action.

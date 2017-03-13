@@ -3,15 +3,15 @@
  * Bookmark repository.
  */
 namespace AppBundle\Repository;
-use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\Pagerfanta;
+use Pagerfanta\Adapter\ArrayAdapter;
 
 /**
  * Class BookmarkRepository.
  *
  * @package AppBundle\Repository
  */
-class BookmarkRepository
+class BookmarkRepository implements BookmarkRepositoryInterface
 {
     /**
      * Bookmarks array
@@ -50,9 +50,18 @@ class BookmarkRepository
      *
      * @return array Result
      */
-    public function findAll()
+    public function findAll($page)
     {
-        return $this->bookmarks;
+        $adapter = new ArrayAdapter($this->bookmarks);
+        $pagerfanta = new Pagerfanta($adapter);
+
+
+        $pagerfanta->setMaxPerPage(1);
+        $pagerfanta ->setCurrentPage($page);
+
+        return $pagerfanta;
+
+
     }
 
     /**
@@ -73,13 +82,14 @@ class BookmarkRepository
      *
      * @return Pagerfanta
      */
-    public function findLatest($page = 1)
+   /* public function findLatest($page = 1)
     {
-        $paginator = new Pagerfanta(new DoctrineORMAdapter($this->queryLatest(), false));
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($this->Latest(), false));
         $paginator->setMaxPerPage(Post::NUM_ITEMS);
         $paginator->setCurrentPage($page);
 
         return $paginator;
     }
+*/
 }
 

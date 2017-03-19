@@ -56,7 +56,7 @@ class BookmarkRepository implements BookmarkRepositoryInterface
         $pagerfanta = new Pagerfanta($adapter);
 
 
-        $pagerfanta->setMaxPerPage(1);
+        $pagerfanta->setMaxPerPage(2);
         $pagerfanta ->setCurrentPage($page);
 
         return $pagerfanta;

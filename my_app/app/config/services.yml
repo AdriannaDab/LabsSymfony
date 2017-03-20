@@ -16,3 +16,9 @@ services:
 # app/config/services.yml
     app.repository.bookmark:
         class: AppBundle\Repository\BookmarkRepository
+
+    app.repository.tag:
+        class: Doctrine\ORM\EntityRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - AppBundle\Entity\Tag

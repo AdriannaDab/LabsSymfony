@@ -11,6 +11,7 @@
         "php": ">=5.3.9",
         "components/jquery": "^3.0",
         "doctrine/doctrine-bundle": "~1.4",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
         "doctrine/orm": "^2.4.8",
         "incenteev/composer-parameter-handler": "~2.0",
         "sensio/distribution-bundle": "~4.0",
@@ -47,7 +48,7 @@
         ]
     },
     "config": {
-        "bin-dir": "/home/adrianna/PhpstormProjects/LabsSymfony/my_app/vendor/bin",
+        "bin-dir": "/home/student/LabsSymfony/my_app/vendor/bin",
         "platform": {
             "php": "5.3.9"
         },

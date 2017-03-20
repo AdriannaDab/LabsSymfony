@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.tags'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.tags'|trans }}</h1>
+    {% if tags is defined and tags|length %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ 'label.id'|trans }}</th>
+                <th>{{ 'label.name'|trans }}</th>
+                <th scope="col">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>{{ 'label.actions'|trans }}
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in tags %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="{{ 'label.actions'|trans }}">
+                            <a href="{{ path('tag_view', {'id': item.id}) }}" class="btn btn-default" title="{{ 'action.view'|trans }}">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                {{ 'action.view'|trans }}
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            {{ 'message.empty_list'|trans }}
+        </div>
+    {% endif %}
+{% endblock %}

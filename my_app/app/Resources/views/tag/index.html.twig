@@ -34,6 +34,11 @@
             {% endfor %}
             </tbody>
         </table>
+        {% if tags.haveToPaginate %}
+            <div class="navigation text-center">
+                {{ pagerfanta(tags, 'twitter_bootstrap3_translated', { routeName: 'tag_index_paginated' }) }}
+            </div>
+        {% endif %}
 
     {% else %}
         <div class="alert alert-warning" role="alert">

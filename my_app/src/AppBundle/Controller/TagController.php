@@ -22,6 +22,36 @@ class TagController extends Controller
     /**
      * Index action.
      *
+     * @param integer $page Current page number
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP Response
+     *
+     * @Route(
+     *     "/",
+     *     defaults={"page": 1},
+     *     name="tag_index",
+     * )
+     * @Route(
+     *     "/page/{page}",
+     *     requirements={"page": "[1-9]\d*"},
+     *     name="tag_index_paginated",
+     * )
+     * @Method("GET")
+     */
+    public function indexAction($page)
+    {
+        $tags = $this->get('app.repository.tag')->findAllPaginated($page);
+
+        return $this->render(
+            'tag/index.html.twig',
+            ['tags' => $tags]
+        );
+    }
+
+
+    /**
+     * Index action.
+     *
      * @return \Symfony\Component\HttpFoundation\Response HTTP Response
      *
      * @Route(
@@ -30,7 +60,7 @@ class TagController extends Controller
      * )
      * @Method("GET")
      */
-    public function indexAction()
+   /* public function indexAction()
     {
         $tags = $this->get('app.repository.tag')->findAll();
 
@@ -38,7 +68,7 @@ class TagController extends Controller
             'tag/index.html.twig',
             ['tags' => $tags]
         );
-    }
+    }*/
 
     /**
      * View action.

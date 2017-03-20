@@ -3,6 +3,8 @@
 namespace AppBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Pagerfanta\Pagerfanta;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
 
 /**
  * TagRepository
@@ -12,4 +14,28 @@ use Doctrine\ORM\EntityRepository;
  */
 class TagRepository extends EntityRepository
 {
+    public function findAllPaginated($page)
+    {
+
+        $adapter = new DoctrineORMAdapter(
+            $this->queryAll()
+        );
+
+        $pagerfanta = new Pagerfanta($adapter);
+        $pagerfanta->setMaxPerPage(2); //TODO: move to entity class
+        $pagerfanta ->setCurrentPage($page);
+
+        return $pagerfanta;
+
+    }
+
+ protected function queryAll()
+    {
+        return $this -> _em -> createQueryBuilder()
+            ->select( 't')
+            ->from('AppBundle:Tag',  't');
+    }
+
+
+
 }

@@ -42,6 +42,8 @@ class TagController extends Controller
     {
         $tags = $this->get('app.repository.tag')->findAllPaginated($page);
 
+        #dump($tags);
+
         return $this->render(
             'tag/index.html.twig',
             ['tags' => $tags]

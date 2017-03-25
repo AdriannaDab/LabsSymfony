@@ -13,42 +13,28 @@ use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\ArrayAdapter;
 
 /**
- * Class BookmarkRepository.
+ * Class BookmarkCsvRepository.
  *
  * @package AppBundle\Repository
  */
-class BookmarkCsvRepository
+class BookmarkCsvRepository implements BookmarkRepositoryInterface
 {
-    /**
-     * Bookmarks array
-     *
-     * @var array $bookmarks
-     */
-
-    function csv_to_array($csv, $delimiter=',')
-    {
-        $csv = array_map('str_getcsv', file(data.csv));
-    }
-
     /**
      * Find all bookmarks.
      *
      * @return array Result
      */
-    public function findAll($page)
+    public function findAll()
     {
-        $adapter = new ArrayAdapter($this->bookmarks);
-        $pagerfanta = new Pagerfanta($adapter);
-
-
-        $pagerfanta->setMaxPerPage(2);
-        $pagerfanta ->setCurrentPage($page);
-
-        return $pagerfanta;
-
-
+        $csvData = file_get_contents("/home/adrianna/PhpstormProjects/LabsSymfony/my_app/src/AppBundle/Repository/data.csv");
+        $lines = explode(PHP_EOL, $csvData);
+        $bookmarks = array();
+        foreach ($lines as $line) {
+            $bookmarks[] = str_getcsv($line);
+        }
+        var_dump($bookmarks);
+        return $bookmarks;
     }
-
     /**
      * Find single record by its id.
      *
@@ -58,8 +44,14 @@ class BookmarkCsvRepository
      */
     public function findOneById($id)
     {
-        return isset($this->bookmarks[$id]) && count($this->bookmarks)
-            ? $this->bookmarks[$id] : null;
+        $csvData = file_get_contents("/home/adrianna/PhpstormProjects/LabsSymfony/my_app/src/AppBundle/Repository/data.csv");
+        $lines = explode(PHP_EOL, $csvData);
+        $bookmarks = array();
+        foreach ($lines as $line) {
+            $bookmarks[] = str_getcsv($line);
+        }
+        print_r($bookmarks);
+        return isset($bookmarks[$id]) && count($bookmarks)
+            ? $bookmarks[$id] : null;
     }
-
 }

@@ -63,6 +63,7 @@ class BookmarkCsvRepository implements BookmarkRepositoryInterface
         return isset($bookmarks[$id]) && count($bookmarks)
             ? $bookmarks[$id] : null;*/
         $bookmarks= $this->loadDate("/home/adrianna/PhpstormProjects/LabsSymfony/my_app/src/AppBundle/Repository/data.csv");
+
         return isset($bookmarks[$id]) && count($bookmarks)
             ? $bookmarks[$id] : null;
     }
@@ -72,36 +73,40 @@ class BookmarkCsvRepository implements BookmarkRepositoryInterface
      *
      * @return array Result
      */
-    public function loadDate($link){
+    public function loadDate($link)
+    {
         $csvData = file_get_contents($link);
         $lines = explode(PHP_EOL, $csvData);
         $bookmarks = array();
 
         //  utworz tablicę z kluczami
         $keys = array();
-        foreach (str_getcsv($lines[0]) as $value) {
-            $keys[]= $value;
+        foreach (str_getcsv($lines[0]) as $value)
+        {
+            $keys[] = $value;
         }
         unset($lines[0]); // usuń linię z etykietami aby mieć same dane do wprowadzenia
 
         // wczytywanie danych do tablicy
         foreach ($lines as $line) {
-            $date= str_getcsv($line);
-            $ready= array();
+            $date = str_getcsv($line);
+            $ready = array();
 
             // zrób tablice asocjacyjną
-            for($i=0; $i<count($date); $i++) {
-                $ready[$keys[$i]]= $date[$i];
+            for($i = 0; $i<count($date); $i++)
+            {
+                $ready[$keys[$i]] = $date[$i];
             }
 
             // stworzenie array dla tag
             $ready["tags"] = split(",", $ready["tags"]);
-            $bookmarks[]= $ready; // dodaj poprawny element do zbiorczej tablicy
+            $bookmarks[] = $ready; // dodaj poprawny element do zbiorczej tablicy
 
             // wyczyść tablice tymczasowe
-            $date= [];
-            $ready= [];
+            $date = [];
+            $ready = [];
         }
+
         return $bookmarks;
     }
 }

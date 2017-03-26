@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="720f6618-e62b-4842-8620-fe35a34ec3dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/bookmark/index.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/bookmark/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/bookmark/view.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/bookmark/view.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkCsvRepository.php" afterPath="$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkCsvRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkRepositoryInterface.php" afterPath="$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkRepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/src/AppBundle/Repository/data.csv" afterPath="$PROJECT_DIR$/my_app/src/AppBundle/Repository/data.csv" />
     </list>
     <ignored path="LabsSymfony.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BookmarkCsvRepository.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BookmarkCsvRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkCsvRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+            <state relative-caret-position="344">
+              <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
               <folding>
                 <element signature="e#157#183#0#PHP" expanded="true" />
               </folding>
@@ -47,8 +42,8 @@
       <file leaf-file-name="BookmarkRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="61" selection-end-column="27" />
+            <state relative-caret-position="-2">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="e#6#37#0#PHP" expanded="true" />
                 <element signature="e#70#96#0#PHP" expanded="true" />
@@ -67,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/bookmark/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -126,9 +121,9 @@
         <option value="$PROJECT_DIR$/my_app/app/config/services.yml" />
         <option value="$PROJECT_DIR$/my_app/src/AppBundle/Repository/data.csv" />
         <option value="$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkCsvRepository.php" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/bookmark/view.html.twig" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/bookmark/index.html.twig" />
+        <option value="$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkCsvRepository.php" />
       </list>
     </option>
   </component>
@@ -568,12 +563,12 @@
       <workItem from="1489322241844" duration="16529000" />
       <workItem from="1489932660605" duration="129000" />
       <workItem from="1489932883862" duration="9188000" />
-      <workItem from="1490557602580" duration="2950000" />
+      <workItem from="1490557602580" duration="3319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37877000" />
+    <option name="totallyTimeSpent" value="38246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="1366" height="716" extended-state="0" />
@@ -991,32 +986,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="61" selection-end-column="27" />
-          <folding>
-            <element signature="e#6#37#0#PHP" expanded="true" />
-            <element signature="e#70#96#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Repository/data.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkCsvRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
-          <folding>
-            <element signature="e#157#183#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1033,6 +1007,27 @@
         <state relative-caret-position="300">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="78" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#37#0#PHP" expanded="true" />
+            <element signature="e#70#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Repository/BookmarkCsvRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+          <folding>
+            <element signature="e#157#183#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

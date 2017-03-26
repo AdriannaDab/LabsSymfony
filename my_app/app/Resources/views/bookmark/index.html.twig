@@ -12,7 +12,8 @@
                     <h1>{{ 'label.id'|trans }}</h1>
                 </dt>
                 <dd>
-                    <h2><a href="{{ path('bookmark_view', { id: loop.index0 }) }}">{{ loop.index0 }}</a></h2>
+                    {#<h2><a href="{{ path('bookmark_view', { id: loop.index0 }) }}">{{ loop.index0 }}</a></h2>#}
+                {{ bookmark.id }}
                 </dd> {#kolejny ele. liczony od zera#}
                 <dt>{{ 'label.url'|trans }}</dt>
                 <dd>{{ bookmark.url }}</dd>
@@ -20,6 +21,7 @@
             {% for tag in bookmark.tags %}
                 <dd>{{ tag|comma }}</dd>
             {% endfor %}
+                <a href="/bookmark/{{bookmark.id - 1}}">{{ 'link'|trans }}</a>
             </dl>
         {% endfor %}
 

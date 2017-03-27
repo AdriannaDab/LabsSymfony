@@ -42,7 +42,7 @@ class TagController extends Controller
     {
         $tags = $this->get('app.repository.tag')->findAllPaginated($page);
 
-        #dump($tags);
+//        dump($tags);
 
         return $this->render(
             'tag/index.html.twig',
@@ -91,6 +91,41 @@ class TagController extends Controller
         return $this->render(
             'tag/view.html.twig',
             ['tag' => $tag]
+        );
+    }
+
+    /**
+     * Add action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request HTTP Request
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response HTTP Response
+     *
+     * @Route(
+     *     "/add",
+     *     name="tag_add",
+     * )
+     * @Method({"GET", "POST"})
+     */
+    public function addAction(Request $request)
+    {
+        $tag = new Tag();
+        $form = $this->createForm(TagType::class, $tag);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->get('app.repository.tag')->save($tag);
+            $this->addFlash('success', 'message.created_successfully');
+
+            return $this->redirectToRoute('tag_index');
+        }
+
+        return $this->render(
+            'tag/add.html.twig',
+            [
+                'tag' => $tag,
+                'form' => $form->createView(),
+            ]
         );
     }
 }

@@ -14,6 +14,13 @@ use Pagerfanta\Adapter\DoctrineORMAdapter;
  */
 class TagRepository extends EntityRepository
 {
+    /**
+     * Gets all records paginated.
+     *
+     * @param int $page Page number
+     *
+     * @return \Pagerfanta\Pagerfanta Result
+     */
     public function findAllPaginated($page)
     {
 
@@ -26,16 +33,35 @@ class TagRepository extends EntityRepository
         $pagerfanta ->setCurrentPage($page);
 
         return $pagerfanta;
-
     }
 
- protected function queryAll()
+    protected function queryAll()
     {
         return $this -> _em -> createQueryBuilder()
-            ->select( 't')
-            ->from('AppBundle:Tag',  't');
+            ->select('t')
+            ->from('AppBundle:Tag', 't');
     }
 
+    /**
+     * Save entity.
+     *
+     * @param Tag $tag Tag entity
+     */
+    public function save(Tag $tag)
+    {
+        $this->_em->persist($tag);
+        $this->_em->flush();
+    }
 
+    /**
+     * Delete entity.
+     *
+     * @param Tag $tag Tag entity
+     */
+    public function delete(Tag $tag)
+    {
+        $this->_em->remove($tag);
+        $this->_em->flush();
+    }
 
 }

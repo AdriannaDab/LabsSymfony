@@ -38,7 +38,7 @@ class Tag
      * of specifying them in app/config/config.yml.
      * See http://symfony.com/doc/current/best_practices/configuration.html#constants-vs-configuration-options
      */
-    const NUM_ITEMS = 10;
+    const NUM_ITEMS = 10; // ile tagow na str wyswietlam (stala)
 
     /**
      * Primary key.

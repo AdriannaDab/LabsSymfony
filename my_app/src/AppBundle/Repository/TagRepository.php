@@ -5,6 +5,7 @@ namespace AppBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
+use AppBundle\Entity\Tag;
 
 /**
  * TagRepository
@@ -49,7 +50,7 @@ class TagRepository extends EntityRepository
      */
     public function save(Tag $tag)
     {
-        $this->_em->persist($tag);
+        $this->_em->persist($tag);// cos jak aktywny rekord
         $this->_em->flush();
     }
 

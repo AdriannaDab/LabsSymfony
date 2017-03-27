@@ -9,6 +9,8 @@ use AppBundle\Entity\Tag;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Form\TagType;
 
 /**
  * Class TagController.
@@ -105,17 +107,17 @@ class TagController extends Controller
      *     "/add",
      *     name="tag_add",
      * )
-     * @Method({"GET", "POST"})
+     * @Method({"GET", "POST"}) //get jak pierwszy raz wyswietlam, post za kazdym razem jak ciskam zapisz
      */
     public function addAction(Request $request)
     {
-        $tag = new Tag();
-        $form = $this->createForm(TagType::class, $tag);
-        $form->handleRequest($request);
+        $tag = new Tag(); //tworze encje pusta
+        $form = $this->createForm(TagType::class, $tag); //tworze nowy form klasy tagtype i przekazuje encje
+        $form->handleRequest($request);//hydracja
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->get('app.repository.tag')->save($tag);
-            $this->addFlash('success', 'message.created_successfully');
+        if ($form->isSubmitted() && $form->isValid()) { //jesli jest wyslany i poprawny
+            $this->get('app.repository.tag')->save($tag);//to zapiszemy
+            $this->addFlash('success', 'message.created_successfully');//pojawia sie flash success
 
             return $this->redirectToRoute('tag_index');
         }
@@ -127,5 +129,25 @@ class TagController extends Controller
                 'form' => $form->createView(),
             ]
         );
+    }
+
+    /**
+     * Edit action.
+     *
+     * @param Tag $tag Tag entity
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP Response
+     *
+     * @Route(
+     *     "/{id}",
+     *     requirements={"id": "[1-9]\d*"},
+     *     name="tag_view",
+     * )
+     * @Method("GET")
+     */
+    public function editAction(Request $request, Tag $tag)
+    {
+
+
     }
 }

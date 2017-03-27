@@ -30,8 +30,22 @@
                             </a>
                         </div>
                     </td>
+                    {#<td>#}
+                        {#<div class="btn-group" role="group" aria-label="{{ 'label.edit'|trans }}">#}
+                        {#<a href="{{ path('tag_edit', {'id': item.id}) }}" class="btn btn-default" title="{{ 'action.edit'|trans }}">#}
+                            {#<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>#}
+                            {#{{ 'action.edit'|trans }}#}
+                        {#</a>#}
+                        {#</div>#}
+                    {#</td>#}
                 </tr>
             {% endfor %}
+            <div class="btn-group" role="group" aria-label="{{ 'label.add'|trans }}">
+                <a href="{{ path('tag_add') }}" class="btn btn-default" title="{{ 'action.add'|trans }}">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                    {{ 'action.add'|trans }}
+                </a>
+            </div>
             </tbody>
         </table>
         {% if tags.haveToPaginate %}

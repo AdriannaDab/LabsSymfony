@@ -56,9 +56,9 @@ class LoadTagData extends AbstractFixture implements ContainerAwareInterface
         foreach ($data as $item) {
             $tag = new Tag();
             $tag->setName($item);
-            $manager->persist($tag);
+            $manager->persist($tag); //sledzi od teraz
         }
-        $manager->flush();
+        $manager->flush(); //robi zapisy entity manager, mamy jednego managera encji i do niego zapis
     }
 
 }

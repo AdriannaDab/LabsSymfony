@@ -139,15 +139,31 @@ class TagController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response HTTP Response
      *
      * @Route(
-     *     "/{id}",
+     *     "/{id}/edit",
      *     requirements={"id": "[1-9]\d*"},
-     *     name="tag_view",
+     *     name="tag_edit",
      * )
      * @Method("GET")
      */
     public function editAction(Request $request, Tag $tag)
     {
+        $form = $this->createForm(TagType::class, $tag);
+        $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->get('app.repository.tag')->save($tag);
+            $this->addFlash('success', 'message.created_successfully');
+
+            return $this->redirectToRoute('tag_index');
+        }
+
+        return $this->render(
+            'tag/edit.html.twig',
+            [
+                'tag' => $tag,
+                'form' => $form->createView(),
+            ]
+        );
 
     }
 }

@@ -30,7 +30,7 @@ class TagRepository extends EntityRepository
         );
 
         $pagerfanta = new Pagerfanta($adapter);
-        $pagerfanta->setMaxPerPage(2); //TODO: move to entity class
+        $pagerfanta->setMaxPerPage(5); //TODO: move to entity class
         $pagerfanta ->setCurrentPage($page);
 
         return $pagerfanta;

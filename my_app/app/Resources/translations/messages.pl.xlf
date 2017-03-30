@@ -2,9 +2,21 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" target-language="pl" datatype="plaintext" original="file.ext">
         <body>
+            <trans-unit id="action.add">
+                <source>action.add</source>
+                <target>Dodaj</target>
+            </trans-unit>
+            <trans-unit id="action.edit">
+                <source>action.edit</source>
+                <target>Edytuj</target>
+            </trans-unit>
             <trans-unit id="action.view">
                 <source>action.view</source>
                 <target>Zobacz</target>
+            </trans-unit>
+            <trans-unit id="action.save">
+                <source>action.save</source>
+                <target>Zapisz</target>
             </trans-unit>
             <trans-unit id="label.actions">
                 <source>label.actions</source>
@@ -22,6 +34,10 @@
                 <source>label.url</source>
                 <target>URL</target>
             </trans-unit>
+            <trans-unit id="link">
+                <source>link</source>
+                <target>Link</target>
+            </trans-unit>
             <trans-unit id="message.empty_list">
                 <source>message.empty_list</source>
                 <target>Pusta lista</target>
@@ -31,8 +47,12 @@
                  <target>Następna</target>
             </trans-unit>
             <trans-unit id="tags.id">
-                 <source>tags</source>
-                 <target>Tagi</target>
+                <source>tags</source>
+                <target>Tagi</target>
+            </trans-unit>
+            <trans-unit id="title.add_tag">
+                <source>title.add_tag</source>
+                <target>Dodaj tag</target>
             </trans-unit>
             <trans-unit id="title.bookmark.id">
                 <source>title.bookmark</source>

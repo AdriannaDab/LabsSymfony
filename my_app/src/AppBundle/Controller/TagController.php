@@ -107,9 +107,10 @@ class TagController extends Controller
      *     "/add",
      *     name="tag_add",
      * )
-     * @Method({"GET", "POST"}) //get jak pierwszy raz wyswietlam, post za kazdym razem jak ciskam zapisz
+     * @Method({"GET", "POST"})
      */
     public function addAction(Request $request)
+        //get jak pierwszy raz wyswietlam, post za kazdym razem jak ciskam zapisz
     {
         $tag = new Tag(); //tworze encje pusta
         $form = $this->createForm(TagType::class, $tag); //tworze nowy form klasy tagtype i przekazuje encje
@@ -135,6 +136,7 @@ class TagController extends Controller
      * Edit action.
      *
      * @param Tag $tag Tag entity
+     * @param \Symfony\Component\HttpFoundation\Request $request HTTP Request
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP Response
      *
@@ -143,7 +145,7 @@ class TagController extends Controller
      *     requirements={"id": "[1-9]\d*"},
      *     name="tag_edit",
      * )
-     * @Method("GET")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Tag $tag)
     {
@@ -152,13 +154,49 @@ class TagController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->get('app.repository.tag')->save($tag);
-            $this->addFlash('success', 'message.created_successfully');
+            $this->addFlash('success', 'message.edited_successfully');
 
             return $this->redirectToRoute('tag_index');
         }
 
         return $this->render(
             'tag/edit.html.twig',
+            [
+                'tag' => $tag,
+                'form' => $form->createView(),
+            ]
+        );
+    }
+
+    /**
+     * Delete action.
+     *
+     * @param Tag $tag Tag entity
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP Response
+     *
+     * @Route(
+     *     "/{id}/delete",
+     *     requirements={"id": "[1-9]\d*"},
+     *     name="tag_delete",
+     * )
+     * @Method({"GET", "POST"})
+     */
+    public function deleteAction(Request $request, Tag $tag)
+    {
+        $form = $this->createForm(TagType::class, $tag);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->get('app.repository.tag')->delete($tag);
+            $this->addFlash('danger', 'message.deleted_successfully');
+
+            return $this->redirectToRoute('tag_index');
+        }
+
+        return $this->render(
+            'tag/delete.html.twig',
             [
                 'tag' => $tag,
                 'form' => $form->createView(),

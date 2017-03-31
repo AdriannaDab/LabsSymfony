@@ -6,6 +6,10 @@
                 <source>action.add</source>
                 <target>Dodaj</target>
             </trans-unit>
+            <trans-unit id="action.delete">
+                <source>action.delete</source>
+                <target>Usuń</target>
+            </trans-unit>
             <trans-unit id="action.edit">
                 <source>action.edit</source>
                 <target>Edytuj</target>
@@ -18,9 +22,21 @@
                 <source>action.save</source>
                 <target>Zapisz</target>
             </trans-unit>
+            <trans-unit id="question.delete">
+                <source>question.delete</source>
+                <target>Czy na pewno chcesz usunąć</target>
+            </trans-unit>
             <trans-unit id="label.actions">
                 <source>label.actions</source>
                 <target>Akcje</target>
+            </trans-unit>
+            <trans-unit id="label.delete">
+                <source>label.delete</source>
+                <target>Usuwanie</target>
+            </trans-unit>
+            <trans-unit id="label.edit">
+                <source>label.edit</source>
+                <target>Edycja</target>
             </trans-unit>
             <trans-unit id="label.id">
                 <source>label.id</source>
@@ -37,6 +53,22 @@
             <trans-unit id="link">
                 <source>link</source>
                 <target>Link</target>
+            </trans-unit>
+            <trans-unit id="message.id">
+                <source>message</source>
+                <target>Zapisano</target>
+             </trans-unit>
+             <trans-unit id="message.created_successfully">
+                <source>message.created_successfully</source>
+                <target>Dodano tag</target>
+            </trans-unit>
+             <trans-unit id="message.deleted_successfully">
+                <source>message.deleted_successfully</source>
+                <target>Usunięto tag</target>
+            </trans-unit>
+            <trans-unit id="message.edited_successfully">
+                <source>message.edited_successfully</source>
+                <target>Poprawiono tag</target>
             </trans-unit>
             <trans-unit id="message.empty_list">
                 <source>message.empty_list</source>
@@ -58,9 +90,13 @@
                 <source>title.bookmark</source>
                 <target>Tytuł zakładki</target>
             </trans-unit>
-            <trans-unit id="title.bookmarks.id">
-                <source>title.bookmarks</source>
-                <target>Tytuły zakładek</target>
+            <trans-unit id="title.edit_tag">
+                <source>title.edit_tag</source>
+                <target>Edytuj tag</target>
+            </trans-unit>
+            <trans-unit id="title.delete_tag">
+                <source>title.delete_tag</source>
+                <target>Usuń tag</target>
             </trans-unit>
             <trans-unit id="title.tag.id">
                 <source>title.tag</source>

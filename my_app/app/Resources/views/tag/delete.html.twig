@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'title.edit_tag'|trans }}
+    {{ 'title.delete_tag'|trans }}
 {% endblock %}
 
 {% block body %}
 
     <h1>
-        {{ 'title.edit_tag'|trans }}
+        {{ 'title.delete_tag'|trans }}
     </h1>
+    <p>  {{ 'question.delete'|trans }}?</p>
+    {% if tag is defined %}
 
-    {% if tag is defined and tag|length %}
-
-        {{ form_start(form, { method: 'post', action: url('tag_edit', {'id': tag.id}) }) }}
+        {{ form_start(form, { method: 'post', action: url('tag_delete', {'id': tag.id}) }) }}
 
         {#from start i from end#}
         {% if false == form.vars.valid %}
@@ -23,11 +23,13 @@
             {{ 'message.form_error'|trans }}
             {#wiadomosc z formularza#}
         {% endif %}
-        {{ form_widget(form) }}
+
         <div>
-            <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary" />
+            <input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-danger" />
         </div>
         {{ form_end(form) }}
     {% endif %}
 
 {% endblock %}
+
+

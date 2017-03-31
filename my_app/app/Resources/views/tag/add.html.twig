@@ -5,9 +5,13 @@
 {% endblock %}
 
 {% block body %}
-    <h1>
-        {{ 'title.add_tag'|trans }}
-    </h1>
+    {#<h1>#}
+        {#{{ 'title.add_tag'|trans }}#}
+    {#</h1>#}
+    <h1>{{ 'title.add_tag'|trans({'%id%': tag.id}) }}</h1>
+
+
+    {#{{ include('tag/_form.html.twig')}}#}
 
     {{ form_start(form, { method: 'post', action: url('tag_add') }) }}
     {#from start i from end#}
@@ -20,6 +24,7 @@
             {#wiadomosc z formularza#}
     {% endif %}
     {{ form_widget(form) }}
+
     <div>
         <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary" />
     </div>

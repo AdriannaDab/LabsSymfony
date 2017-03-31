@@ -10,7 +10,12 @@
         {{ 'title.edit_tag'|trans }}
     </h1>
 
-    {% if tag is defined and tag|length %}
+    {#{% if tag is defined and tag|length %}#}
+        {#{{ include('tag/_form.html.twig', {#}
+            {#form: form,#}
+            {#button_label: 'action.save'|trans,#}
+            {#action: url('tag_edit', {'id': tag.id})#}
+        {#}, with_context = false) }}#}
 
         {{ form_start(form, { method: 'post', action: url('tag_edit', {'id': tag.id}) }) }}
 

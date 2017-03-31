@@ -118,7 +118,7 @@ class TagController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) { //jesli jest wyslany i poprawny
             $this->get('app.repository.tag')->save($tag);//to zapiszemy
-            $this->addFlash('success', 'message.created_successfully');//pojawia sie flash success
+            $this->addFlash('success_created', 'message.created_successfully');//pojawia sie flash success
 
             return $this->redirectToRoute('tag_index');
         }
@@ -154,7 +154,7 @@ class TagController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->get('app.repository.tag')->save($tag);
-            $this->addFlash('success', 'message.edited_successfully');
+            $this->addFlash('success_edited', 'message.edited_successfully');
 
             return $this->redirectToRoute('tag_index');
         }

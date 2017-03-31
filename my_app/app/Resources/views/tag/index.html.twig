@@ -15,22 +15,6 @@
 
     {{ include('tag/_single_alert_message.html.twig') }}
 
-    {#{% if app.session.flashBag.has('success') %}#}
-        {#<div class="alert alert-success">#}
-            {#{% for msg in app.session.flashBag.get('success') %}#}
-                {#{{ 'message'|trans }}#}
-            {#{% endfor %}#}
-        {#</div>#}
-    {#{% endif %}#}
-
-    {% if app.session.flashBag.has('danger') %}
-        <div class="alert alert-danger">
-            {% for msg in app.session.flashBag.get('danger') %}
-                {{ 'message.deleted_successfully'|trans }}
-            {% endfor %}
-        </div>
-    {% endif %}
-
     <h1>{{ 'title.tags'|trans }}</h1>
     {% if tags is defined and tags|length %}
         <table class="table table-striped">

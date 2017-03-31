@@ -23,10 +23,26 @@
         {#{% endfor %}#}
     {#</div>#}
 {#{% endif %}#}
-{% if app.session.flashBag.has('success') %}
+{% if app.session.flashBag.has('success_created') %}
     <div class="alert alert-success">
-        {% for msg in app.session.flashBag.get('success') %}
-            {{ 'message'|trans }}
+        {% for msg in app.session.flashBag.get('success_created') %}
+            {{ 'message.created_successfully'|trans }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% if app.session.flashBag.has('success_edited') %}
+    <div class="alert alert-success">
+        {% for msg in app.session.flashBag.get('success_edited') %}
+            {{ 'message.edited_successfully'|trans }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% if app.session.flashBag.has('danger') %}
+    <div class="alert alert-danger">
+        {% for msg in app.session.flashBag.get('danger') %}
+            {{ 'message.deleted_successfully'|trans }}
         {% endfor %}
     </div>
 {% endif %}

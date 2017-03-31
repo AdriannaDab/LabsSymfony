@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="720f6618-e62b-4842-8620-fe35a34ec3dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/_single_alert_message.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/delete.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/translations/messages.pl.xlf" afterPath="$PROJECT_DIR$/my_app/app/Resources/translations/messages.pl.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/tag/add.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/tag/edit.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/tag/_single_alert_message.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/_single_alert_message.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/tag/delete.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/delete.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/tag/index.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/Resources/views/tag/view.html.twig" afterPath="$PROJECT_DIR$/my_app/app/Resources/views/tag/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/app/config/config.yml" afterPath="$PROJECT_DIR$/my_app/app/config/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_app/src/AppBundle/Controller/TagController.php" afterPath="$PROJECT_DIR$/my_app/src/AppBundle/Controller/TagController.php" />
     </list>
     <ignored path="LabsSymfony.iws" />
@@ -39,8 +35,8 @@
       <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/add.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="300">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -49,18 +45,18 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="-75">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_single_alert_message.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_single_alert_message.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/_single_alert_message.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="193">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -69,8 +65,8 @@
       <file leaf-file-name="TagController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Controller/TagController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="120" column="68" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="68" />
+            <state relative-caret-position="195">
+              <caret line="156" column="43" selection-start-line="156" selection-start-column="43" selection-end-line="156" selection-end-column="43" />
               <folding>
                 <element signature="e#67#92#0#PHP" expanded="true" />
               </folding>
@@ -78,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.pl.xlf" pinned="false" current-in-tab="false">
+      <file leaf-file-name="messages.pl.xlf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my_app/app/Resources/translations/messages.pl.xlf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
-              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -123,14 +119,14 @@
         <option value="$PROJECT_DIR$/my_app/src/AppBundle/Repository/TagRepository.php" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/view.html.twig" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/edit.html.twig" />
-        <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/delete.html.twig" />
-        <option value="$PROJECT_DIR$/my_app/src/AppBundle/Controller/TagController.php" />
         <option value="$PROJECT_DIR$/my_app/app/config/config.yml" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/add.html.twig" />
-        <option value="$PROJECT_DIR$/my_app/app/Resources/translations/messages.pl.xlf" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/_flash_messages.html.twig" />
+        <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/delete.html.twig" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/index.html.twig" />
+        <option value="$PROJECT_DIR$/my_app/src/AppBundle/Controller/TagController.php" />
         <option value="$PROJECT_DIR$/my_app/app/Resources/views/tag/_single_alert_message.html.twig" />
+        <option value="$PROJECT_DIR$/my_app/app/Resources/translations/messages.pl.xlf" />
       </list>
     </option>
   </component>
@@ -274,8 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -562,13 +556,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prac_lic_3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -655,17 +651,18 @@
       <workItem from="1490557602580" duration="3432000" />
       <workItem from="1490616779244" duration="2307000" />
       <workItem from="1490950965918" duration="9662000" />
+      <workItem from="1490989051775" duration="1266000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58028000" />
+    <option name="totallyTimeSpent" value="59294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="1366" height="716" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27954546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2840909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1024,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,7 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1056,17 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/delete.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-          <folding>
-            <element signature="e#609#616#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1074,56 +1058,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/add.html.twig">
+    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/_flash_messages.html.twig" />
+    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/delete.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="223">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my_app/src/AppBundle/Controller/TagController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="120" column="68" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="68" />
+        <state relative-caret-position="195">
+          <caret line="156" column="43" selection-start-line="156" selection-start-column="43" selection-end-line="156" selection-end-column="43" />
           <folding>
             <element signature="e#67#92#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/translations/messages.pl.xlf">
+    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/_single_alert_message.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+        <state relative-caret-position="193">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/_flash_messages.html.twig">
+    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="11" />
+        <state relative-caret-position="300">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="-75">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/views/tag/_single_alert_message.html.twig">
+    <entry file="file://$PROJECT_DIR$/my_app/app/Resources/translations/messages.pl.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="201">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding />
         </state>
       </provider>

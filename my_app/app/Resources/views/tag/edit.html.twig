@@ -18,21 +18,21 @@
         {#}, with_context = false) }}#}
 
         {{ form_start(form, { method: 'post', action: url('tag_edit', {'id': tag.id}) }) }}
-
+            {{ include('_form.html.twig')}}
         {#from start i from end#}
-        {% if false == form.vars.valid %}
-            <div class="alert alert-danger" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            {{ 'message.form_error'|trans }}
+        {#{% if false == form.vars.valid %}#}
+            {#<div class="alert alert-danger" role="alert">#}
+            {#<button type="button" class="close" data-dismiss="alert" aria-label="Close">#}
+                {#<span aria-hidden="true">&times;</span>#}
+            {#</button>#}
+            {#{{ 'message.form_error'|trans }}#}
             {#wiadomosc z formularza#}
-        {% endif %}
-        {{ form_widget(form) }}
-        <div>
-            <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary" />
-        </div>
+        {#{% endif %}#}
+        {#{{ form_widget(form) }}#}
+        {#<div>#}
+            {#<input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary" />#}
+        {#</div>#}
+
         {{ form_end(form) }}
-    {% endif %}
 
 {% endblock %}

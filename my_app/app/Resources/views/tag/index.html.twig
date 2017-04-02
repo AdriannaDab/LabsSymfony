@@ -13,7 +13,7 @@
         {#{% endfor %}#}
     {#{% endfor %}#}
 
-    {{ include('tag/_single_alert_message.html.twig') }}
+    {{ include('_single_alert_message.html.twig') }}
 
     <h1>{{ 'title.tags'|trans }}</h1>
     {% if tags is defined and tags|length %}
@@ -39,6 +39,7 @@
                                 {{ 'action.view'|trans }}
                             </a>
                         </div>
+
                     </td>
                     <td>
                         <div class="btn-group" role="group" aria-label="{{ 'label.edit'|trans }}">

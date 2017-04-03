@@ -1,18 +1,12 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}
     {{ 'title.add_tag'|trans }}
 {% endblock %}
-
 {% block body %}
     <h1>
         {{ 'title.add_tag'|trans }}
     </h1>
-
-
-
     {{ form_start(form, { method: 'post', action: url('tag_add') }) }}
         {{ include('_form.html.twig')}}
     {{ form_end(form) }}
-
 {% endblock %}

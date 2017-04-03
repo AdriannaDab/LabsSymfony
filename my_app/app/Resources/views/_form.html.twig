@@ -24,7 +24,7 @@
 {#{% endif %}#}
 {#{{ form_end(form) }}#}
 
-
+{#{{ form_start(form, { method: 'post', action: url('bookmark_add') }) }}#}
 {% if false == form.vars.valid %}
 <div class="alert alert-danger" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -37,4 +37,5 @@
     <div>
         <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary" />
     </div>
+    {#{{ form_end(form) }}#}
 </div>

@@ -14,8 +14,14 @@ services:
             - { name: twig.extension }
 
 # app/config/services.yml
+#    app.repository.bookmark:
+#        class: AppBundle\Repository\BookmarkCsvRepository
+
     app.repository.bookmark:
-        class: AppBundle\Repository\BookmarkCsvRepository
+      class: Doctrine\ORM\EntityRepository
+      factory: ['@doctrine.orm.default_entity_manager', getRepository]
+      arguments:
+        - AppBundle\Entity\Bookmark
 
     app.repository.tag:
         class: Doctrine\ORM\EntityRepository

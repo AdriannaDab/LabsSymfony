@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ 'title.add_bookmark'|trans }}
+{% endblock %}
+{% block body %}
+    <h1>
+        {{ 'title.add_bookmark'|trans }}
+    </h1>
+    {{ form_start(form, { method: 'post', action: url('bookmark_add') }) }}
+        {{ include('_form.html.twig') }}
+    {{ form_end(form) }}
+{% endblock %}

@@ -86,6 +86,14 @@
                 <source>tags</source>
                 <target>Tagi</target>
             </trans-unit>
+            <trans-unit id="bookmarks.id">
+                <source>bookmarks</source>
+                <target>Zakładki</target>
+             </trans-unit>
+             <trans-unit id="title.add_bookmark">
+                 <source>title.add_bookmark</source>
+                 <target>Usuń zakładkę</target>
+            </trans-unit>
             <trans-unit id="title.add_tag">
                 <source>title.add_tag</source>
                 <target>Dodaj tag</target>
@@ -94,9 +102,17 @@
                 <source>title.bookmark</source>
                 <target>Tytuł zakładki</target>
             </trans-unit>
+             <trans-unit id="title.edit_bookmark">
+                <source>title.edit_bookmark</source>
+                <target>Usuń zakładkę</target>
+            </trans-unit>
             <trans-unit id="title.edit_tag">
                 <source>title.edit_tag</source>
                 <target>Edytuj tag</target>
+            </trans-unit>
+            <trans-unit id="title.delete_bookmark">
+                <source>title.delete_bookmark</source>
+                <target>Usuń zakładkę</target>
             </trans-unit>
             <trans-unit id="title.delete_tag">
                 <source>title.delete_tag</source>

@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <h1>{{ 'title.bookmarks'|trans }}</h1>
+    <h1>{{ 'bookmarks'|trans }}</h1>
 
     {% if bookmarks is defined and bookmarks|length %}
 
@@ -18,12 +18,29 @@
                 <dt>{{ 'label.url'|trans }}</dt>
                 <dd>{{ bookmark.url }}</dd>
                 <dt>{{ 'tags'|trans }}</dt>
-            {% for tag in bookmark.tags %}
-                <dd>{{ tag|comma }}</dd>
-            {% endfor %}
-                <a href="/bookmark/{{bookmark.id - 1}}">{{ 'link'|trans }}</a>
+            {#{% for tag in bookmark.tags %}#}
+                {#<dd>{{ tag|comma }}</dd>#}
+            {#{% endfor %}#}
+                <a href="{{ path('bookmark_view', {'id': bookmark.id}) }})">{{ 'link'|trans }}</a>
+                <dd>
+                    <a href="{{ path('bookmark_edit', {'id': bookmark.id}) }}">
+                        {{ 'action.edit'|trans }}
+                    </a>
+                </dd>
+                <dd>
+                    <a href="{{ path('bookmark_delete', {'id': bookmark.id}) }}">
+                        {{ 'action.delete'|trans }}
+                    </a>
+                </dd>
             </dl>
         {% endfor %}
+
+        <div class="btn-group" role="group" aria-label="{{ 'label.add'|trans }}">
+            <a href="{{ path('bookmark_add') }}" class="btn btn-default" title="{{ 'action.add'|trans }}">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                {{ 'action.add'|trans }}
+            </a>
+        </div>
 
         {% if bookmarks.haveToPaginate %}
             <div class="navigation text-center">

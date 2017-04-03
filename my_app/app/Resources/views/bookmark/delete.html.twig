@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'title.delete_tag'|trans }}
+    {{ 'title.delete_bookmark'|trans }}
 {% endblock %}
 
 {% block body %}
 
     <h1>
-        {{ 'title.delete_tag'|trans }} {{ tag.name }}
+        {{ 'title.delete_bookmark'|trans }} {{ bookmark.url }}
     </h1>
     <p>  {{ 'question.delete'|trans }}?</p>
-    {% if tag is defined %}
+    {% if bookmark is defined %}
 
-        {{ form_start(form, { method: 'post', action: url('tag_delete', {'id': tag.id}) }) }}
+        {{ form_start(form, { method: 'post', action: url('bookmark_delete', {'id': bookmark.id}) }) }}
 
         {#from start i from end#}
         {% if false == form.vars.valid %}
@@ -23,9 +23,7 @@
             {{ 'message.form_error'|trans }}
             {#wiadomosc z formularza#}
         {% endif %}
-        <div hidden>
             {{ form_widget(form) }}
-        </div>
         <div>
             <input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-danger" />
         </div>
@@ -33,5 +31,3 @@
     {% endif %}
 
 {% endblock %}
-
-

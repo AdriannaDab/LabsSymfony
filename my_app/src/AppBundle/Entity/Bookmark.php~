@@ -1,45 +1,35 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: adrianna
- * Date: 19.03.17
- * Time: 20:03
- */
-
-/**
- * Tag entity.
+ * Bookmark entity.
  */
 namespace AppBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
-
 /**
- * Class Tag.
+ * Class Bookmark.
  *
  * @package AppBundle\Entity
  *
  * @ORM\Table(
- *     name="tags"
+ * name="bookmarks"
  * )
  * @ORM\Entity(
- *     repositoryClass="AppBundle\Repository\TagRepository"
+ * repositoryClass="AppBundle\Repository\BookmarkRepository"
  * )
  * @UniqueEntity(
- *     groups={"tag-default"},
- *     fields={"name"}
+ * groups={"bookmark-default"},
+ * fields={"url"}
  * )
  */
-class Tag
+class Bookmark
 {
     /**
      * Use constants to define configuration options that rarely change instead
      * of specifying them in app/config/config.yml.
      * See http://symfony.com/doc/current/best_practices/configuration.html#constants-vs-configuration-options
      */
-    const NUM_ITEMS = 10; // ile tagow na str wyswietlam (stala)
-
+    const NUM_ITEMS = 10;
     /**
      * Primary key.
      *
@@ -47,69 +37,63 @@ class Tag
      *
      * @ORM\Id
      * @ORM\Column(
-     *     name="id",
-     *     type="integer",
-     *     nullable=false,
-     *     options={"unsigned"=true},
+     * name="id",
+     * type="integer",
+     * nullable=false,
+     * options={"unsigned"=true},
      * )
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
     /**
-     * Name.
+     * Url.
      *
-     * @var string $name
+     * @var string $url
      *
      * @ORM\Column(
-     *     name="name",
-     *     type="string",
-     *     length=128,
-     *     nullable=false,
+     * name="url",
+     * type="string",
+     * length=255,
+     * nullable=false,
      * )
      *
      * @Assert\NotBlank(
-     *     groups={"tag-default"}
+     * groups={"url-default"}
      * )
      * @Assert\Length(
-     *     groups={"tag-default"},
-     *     min="3",
-     *     max="128",
+     * groups={"url-default"},
+     * min="3",
+     * max="255",
      * )
      */
-    protected $name;
-
-
+    protected $url;
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
     }
-
     /**
-     * Set name
+     * Set url
      *
-     * @param string $name
-     * @return Tag
+     * @param string $url
+     * @return Bookmark
      */
-    public function setName($name)
+    public function setUrl($url)
     {
-        $this->name = $name;
-
+        $this->url = $url;
         return $this;
     }
-
     /**
-     * Get name
+     * Get url
      *
-     * @return string 
+     * @return string
      */
-    public function getName()
+    public function getUrl()
     {
-        return $this->name;
+        return $this->url;
     }
 }

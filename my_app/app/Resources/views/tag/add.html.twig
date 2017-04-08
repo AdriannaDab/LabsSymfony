@@ -6,7 +6,9 @@
     <h1>
         {{ 'title.add_tag'|trans }}
     </h1>
-    {{ form_start(form, { method: 'post', action: url('tag_add') }) }}
-        {{ include('_form.html.twig')}}
-    {{ form_end(form) }}
+    {#{{ form_start(form, { method: 'post', action: url('tag_add') }) }}#}
+        {#{{ include('_form.html.twig')}}#}
+    {#{{ form_end(form) }}#}
+
+    {{ include('_form.html.twig', {'url': 'tag_add'}) }}
 {% endblock %}

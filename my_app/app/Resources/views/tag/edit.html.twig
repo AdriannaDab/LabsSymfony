@@ -17,8 +17,8 @@
             {#action: url('tag_edit', {'id': tag.id})#}
         {#}, with_context = false) }}#}
 
-        {{ form_start(form, { method: 'post', action: url('tag_edit', {'id': tag.id}) }) }}
-            {{ include('_form.html.twig')}}
+        {#{{ form_start(form, { method: 'post', action: url('tag_edit', {'id': tag.id}) }) }}#}
+            {#{{ include('_form.html.twig')}}#}
         {#from start i from end#}
         {#{% if false == form.vars.valid %}#}
             {#<div class="alert alert-danger" role="alert">#}
@@ -33,6 +33,8 @@
             {#<input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary" />#}
         {#</div>#}
 
-        {{ form_end(form) }}
+        {#{{ form_end(form) }}#}
+
+    {{ include('_form.html.twig', {'url': 'tag_edit', 'id': tag.id}) }}
 
 {% endblock %}

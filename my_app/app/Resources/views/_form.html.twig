@@ -25,6 +25,11 @@
 {#{{ form_end(form) }}#}
 
 {#{{ form_start(form, { method: 'post', action: url('bookmark_add') }) }}#}
+{% if id is defined %}
+    {{ form_start(form, { method: 'post', action: url(url, {'id':id}) }) }}
+{% else %}
+    {{ form_start(form, { method: 'post', action: url(url) }) }}
+{% endif %}
 {% if false == form.vars.valid %}
 <div class="alert alert-danger" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -32,10 +37,11 @@
     </button>
     {{ 'message.form_error'|trans }}
     {#wiadomosc z formularza#}
+</div>
     {% endif %}
         {{ form_widget(form) }}
     <div>
         <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary" />
     </div>
     {#{{ form_end(form) }}#}
-</div>
+{{ form_end(form) }}

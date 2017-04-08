@@ -6,7 +6,5 @@
     <h1>
         {{ 'title.edit_bookmark'|trans }}
     </h1>
-    {{ form_start(form, { method: 'post', action: url('bookmark_edit', {'id': bookmark.id}) }) }}
-    {{ include('_form.html.twig') }}
-    {{ form_end(form) }}
+    {{ include('_form.html.twig', {'url': 'bookmark_edit', 'id': bookmark.id}) }}
 {% endblock %}

@@ -10,24 +10,24 @@
         {{ 'title.delete_bookmark'|trans }} {{ bookmark.url }}
     </h1>
     <p>  {{ 'question.delete'|trans }}?</p>
-    {% if bookmark is defined %}
-
-        {{ form_start(form, { method: 'post', action: url('bookmark_delete', {'id': bookmark.id}) }) }}
+    {#{% if bookmark is defined %}#}
+{##}
+        {#{{ form_start(form, { method: 'post', action: url('bookmark_delete', {'id': bookmark.id}) }) }}#}
 
         {#from start i from end#}
-        {% if false == form.vars.valid %}
-            <div class="alert alert-danger" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            {{ 'message.form_error'|trans }}
+        {#{% if false == form.vars.valid %}#}
+            {#<div class="alert alert-danger" role="alert">#}
+            {#<button type="button" class="close" data-dismiss="alert" aria-label="Close">#}
+                {#<span aria-hidden="true">&times;</span>#}
+            {#</button>#}
+            {#{{ 'message.form_error'|trans }}#}
             {#wiadomosc z formularza#}
-        {% endif %}
-            {{ form_widget(form) }}
-        <div>
-            <input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-danger" />
-        </div>
-        {{ form_end(form) }}
-    {% endif %}
-
+        {#{% endif %}#}
+            {#{{ form_widget(form) }}#}
+        {#<div>#}
+            {#<input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-danger" />#}
+        {#</div>#}
+        {#{{ form_end(form) }}#}
+    {#{% endif %}#}
+    {{ include('_form.html.twig', {'url': 'bookmark_delete', 'id': bookmark.id}) }}
 {% endblock %}

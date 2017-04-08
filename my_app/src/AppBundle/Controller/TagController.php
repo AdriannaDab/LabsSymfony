@@ -9,6 +9,7 @@ use AppBundle\Entity\Tag;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Form\TagType;
 
@@ -184,7 +185,7 @@ class TagController extends Controller
      */
     public function deleteAction(Request $request, Tag $tag)
     {
-        $form = $this->createForm(TagType::class, $tag);
+        $form = $this->createForm(FormType::class, $tag);
 
         $form->handleRequest($request);
 

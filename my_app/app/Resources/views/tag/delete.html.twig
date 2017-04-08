@@ -12,24 +12,26 @@
     <p>  {{ 'question.delete'|trans }}?</p>
     {% if tag is defined %}
 
-        {{ form_start(form, { method: 'post', action: url('tag_delete', {'id': tag.id}) }) }}
+        {#{{ form_start(form, { method: 'post', action: url('tag_delete', {'id': tag.id}) }) }}#}
 
         {#from start i from end#}
-        {% if false == form.vars.valid %}
-            <div class="alert alert-danger" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            {{ 'message.form_error'|trans }}
+        {#{% if false == form.vars.valid %}#}
+            {#<div class="alert alert-danger" role="alert">#}
+            {#<button type="button" class="close" data-dismiss="alert" aria-label="Close">#}
+                {#<span aria-hidden="true">&times;</span>#}
+            {#</button>#}
+            {#{{ 'message.form_error'|trans }}#}
             {#wiadomosc z formularza#}
-        {% endif %}
-        <div hidden>
-            {{ form_widget(form) }}
-        </div>
-        <div>
-            <input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-danger" />
-        </div>
-        {{ form_end(form) }}
+        {#{% endif %}#}
+        {#<div hidden>#}
+            {#{{ form_widget(form) }}#}
+        {#</div>#}
+        {#<div>#}
+            {#<input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-danger" />#}
+        {#</div>#}
+        {#{{ form_end(form) }}#}
+
+        {{ include('_form.html.twig', {'url': 'tag_delete', 'id': tag.id}) }}
     {% endif %}
 
 {% endblock %}

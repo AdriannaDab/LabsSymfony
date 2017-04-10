@@ -11,9 +11,9 @@
         <h2>{{ 'label.url'|trans }}:</h2>
             <p> {{ bookmark.url }} </p>
         <h2>{{ 'tags'|trans }}:</h2>
-        {#{% for tag in bookmark.tags %}#}
-            {#<p>{{ tag|comma }}</p>#}
-        {#{% endfor %}#}
+        {% for tag in bookmark.tags %}
+            <p>{{ tag.name|comma }}</p>
+        {% endfor %}
 
     {% else %}
         <p>

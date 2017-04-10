@@ -24,6 +24,23 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Bookmark
 {
+
+    /**
+     * Tags.
+     *
+     * @var \Doctrine\Common\Collections\ArrayCollection $tags
+     *
+     * @ORM\ManyToMany(
+     *     targetEntity="Tag",
+     *     inversedBy="bookmarks",
+     * )
+     * @ORM\JoinTable(
+     *     name="bookmarks_tags"
+     * )
+     */
+    /*inversedBy- wlsciciel, maptby w drugim*/
+    protected $tags;
+
     /**
      * Use constants to define configuration options that rarely change instead
      * of specifying them in app/config/config.yml.
@@ -95,5 +112,45 @@ class Bookmark
     public function getUrl()
     {
         return $this->url;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tags = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add tags
+     *
+     * @param \AppBundle\Entity\Tag $tags
+     * @return Bookmark
+     */
+    public function addTag(\AppBundle\Entity\Tag $tags)
+    {
+        $this->tags[] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Remove tags
+     *
+     * @param \AppBundle\Entity\Tag $tags
+     */
+    public function removeTag(\AppBundle\Entity\Tag $tags)
+    {
+        $this->tags->removeElement($tags);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTags()
+    {
+        return $this->tags;
     }
 }

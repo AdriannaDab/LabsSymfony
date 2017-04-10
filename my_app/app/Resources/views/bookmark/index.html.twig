@@ -18,9 +18,9 @@
                 <dt>{{ 'label.url'|trans }}</dt>
                 <dd>{{ bookmark.url }}</dd>
                 <dt>{{ 'tags'|trans }}</dt>
-            {#{% for tag in bookmark.tags %}#}
-                {#<dd>{{ tag|comma }}</dd>#}
-            {#{% endfor %}#}
+            {% for tag in bookmark.tags %}
+                <dd>{{ tag.name }}</dd>
+            {% endfor %}
                 <a href="{{ path('bookmark_view', {'id': bookmark.id}) }})">{{ 'link'|trans }}</a>
                 <dd>
                     <a href="{{ path('bookmark_edit', {'id': bookmark.id}) }}">

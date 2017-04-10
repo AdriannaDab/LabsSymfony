@@ -92,7 +92,7 @@
              </trans-unit>
              <trans-unit id="title.add_bookmark">
                  <source>title.add_bookmark</source>
-                 <target>Usuń zakładkę</target>
+                 <target>Dodaj zakładkę</target>
             </trans-unit>
             <trans-unit id="title.add_tag">
                 <source>title.add_tag</source>
@@ -104,7 +104,7 @@
             </trans-unit>
              <trans-unit id="title.edit_bookmark">
                 <source>title.edit_bookmark</source>
-                <target>Usuń zakładkę</target>
+                <target>Edytuj zakładkę</target>
             </trans-unit>
             <trans-unit id="title.edit_tag">
                 <source>title.edit_tag</source>

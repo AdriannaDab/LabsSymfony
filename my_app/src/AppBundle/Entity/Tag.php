@@ -33,6 +33,19 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Tag
 {
+
+    /**
+     * Bookmarks.
+     *
+     * @var \Doctrine\Common\Collections\ArrayCollection $bookmarks
+     *
+     * @ORM\ManyToMany(
+     *     targetEntity="Bookmark",
+     *     mappedBy="tags",
+     * )
+     */
+    protected $bookmarks;
+
     /**
      * Use constants to define configuration options that rarely change instead
      * of specifying them in app/config/config.yml.
@@ -111,5 +124,45 @@ class Tag
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->bookmarks = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add bookmarks
+     *
+     * @param \AppBundle\Entity\Bookmark $bookmarks
+     * @return Tag
+     */
+    public function addBookmark(\AppBundle\Entity\Bookmark $bookmarks)
+    {
+        $this->bookmarks[] = $bookmarks;
+
+        return $this;
+    }
+
+    /**
+     * Remove bookmarks
+     *
+     * @param \AppBundle\Entity\Bookmark $bookmarks
+     */
+    public function removeBookmark(\AppBundle\Entity\Bookmark $bookmarks)
+    {
+        $this->bookmarks->removeElement($bookmarks);
+    }
+
+    /**
+     * Get bookmarks
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getBookmarks()
+    {
+        return $this->bookmarks;
     }
 }

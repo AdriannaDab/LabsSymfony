@@ -18,12 +18,29 @@ use AppBundle\Entity\Tag;
  */
 class BookmarkType extends AbstractType
 {
+//    protected $tagRepository = null;
+//
+//    public function __construct(TagRepository $repository)
+//    {
+//        $this->tagRepository = $repository;
+//    }
+
+    /**
+     * Tag repository.
+     *
+     * @var TagRepository|null Tag repository
+     */
     protected $tagRepository = null;
 
-    public function __construct(TagRepository $repository)
-{
-$this->tagRepository = $repository;
-}
+    /**
+     * BookmarkType constructor.
+     *
+     * @param TagRepository $tagRepository Tag repository
+     */
+    public function __construct(TagRepository $tagRepository)
+    {
+        $this->tagRepository = $tagRepository;
+    }
 
     /**
      * {@inheritdoc}
@@ -42,24 +59,40 @@ $this->tagRepository = $repository;
             ]
         );
 
+//        $builder->add(
+//            'tags',
+//            TextType::class,
+//            [
+//  .              'class' => Tag::class,
+//   .             'choice_label' => function ($tag) {
+//    .                return $tag->getName();
+//     .           },
+//      .          'label' => 'label.tag',
+//       .         'required' => false,
+//        .        'expanded' => true,
+//         .       'multiple' => true,
+//                'label' => 'label.url',
+//                'required' => true,
+//            ]
+//        );
+
+//        $builder->get('tags')->addModelTransformer(new TagTransformer());
+
         $builder->add(
             'tags',
             TextType::class,
             [
-//                'class' => Tag::class,
-//                'choice_label' => function ($tag) {
-//                    return $tag->getName();
-//                },
-//                'label' => 'label.tag',
-//                'required' => false,
-//                'expanded' => true,
-//                'multiple' => true,
-                'label' => 'label.url',
+                'label' => 'label.tags',
                 'required' => true,
+                'attr' => [
+                    'max_length' => 255,
+                ],
             ]
         );
 
-        $builder->get('tags')->addModelTransformer(new TagTransformer());
+        $builder->get('tags')->addModelTransformer(
+            new TagTransformer($this->tagRepository)
+        );
     }
     /**
      * {@inheritdoc}

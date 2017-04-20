@@ -17,6 +17,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class TagType extends AbstractType
 {
+
+
     /**
      * {@inheritdoc}
      */

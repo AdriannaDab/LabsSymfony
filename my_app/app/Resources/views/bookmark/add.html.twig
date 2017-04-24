@@ -3,12 +3,22 @@
     {{ 'title.add_bookmark'|trans }}
 {% endblock %}
 {% block body %}
-    <h1>
-        {{ 'title.add_bookmark'|trans }}
-    </h1>
+    {#<h1>#}
+        {#{{ 'title.add_bookmark'|trans }}#}
+    {#</h1>#}
     {#{{ form_start(form, { method: 'post', action: url('bookmark_add') }) }}#}
         {#{{ include('_form.html.twig') }}#}
     {#{{ form_end(form) }}#}
 
-    {{ include('_form.html.twig', {'url': 'bookmark_add'}) }}
+    {#{{ include('_form.html.twig', {'url': 'bookmark_add'}) }}#}
+
+    {% include 'default/_form.html.twig' with {
+    page_title: 'title.add_bookmark',
+    attr: {
+    method: 'post',
+    action: url('bookmark_add')
+    },
+    back_to_list_path: 'bookmark_index',
+    } %}
+
 {% endblock %}

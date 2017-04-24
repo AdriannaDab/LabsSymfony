@@ -4,6 +4,7 @@ namespace AppBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Gedmo\Mapping\Annotation as Gedmo;
 use AppBundle\Entity\Bookmark;
 /**
  * BookmarkRepository
@@ -13,6 +14,7 @@ use AppBundle\Entity\Bookmark;
  */
 class BookmarkRepository extends EntityRepository
 {
+
     /**
      * Gets all records paginated.
      *
@@ -41,6 +43,7 @@ class BookmarkRepository extends EntityRepository
             ->from('AppBundle:Bookmark', 't');
     }
 
+
     /**
      * Save entity.
      *
@@ -51,6 +54,7 @@ class BookmarkRepository extends EntityRepository
         $this->_em->persist($bookmark);
         $this->_em->flush();
     }
+
     /**
      * Delete entity.
      *

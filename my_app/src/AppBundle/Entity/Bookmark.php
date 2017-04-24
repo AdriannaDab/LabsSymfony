@@ -6,6 +6,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Class Bookmark.
  *
@@ -62,6 +63,9 @@ class Bookmark
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+
+
     /**
      * Url.
      *
@@ -84,6 +88,54 @@ class Bookmark
      * )
      */
     protected $url;
+
+
+
+
+    /**
+     * Created at.
+     *
+     * @var \DateTime $createdAt
+     *
+     * @ORM\Column(
+     *     name="created_at",
+     *     type="datetime",
+     *     nullable=true,
+     * )
+     * @Gedmo\Timestampable(
+     *     on="create",
+     * )
+     */
+    protected $createdAt;
+
+    /**
+     * Modified at.
+     *
+     * @var \DateTime $modifiedAt
+     *
+     * @ORM\Column(
+     *     name="modified_at",
+     *     type="datetime",
+     *     nullable=true,
+     * )
+     * @Gedmo\Timestampable(
+     *     on="update",
+     * )
+     */
+    protected $modifiedAt;
+
+    /**
+     * Is_public.
+     *
+     * @var string $is_public
+     *
+     * @ORM\Column(columnDefinition="TINYINT DEFAULT 1"
+     * )
+     *
+     */
+    protected $is_public;
+
+
     /**
      * Get id
      *

@@ -6,9 +6,9 @@
 
 {% block body %}
 
-    <h1>
-        {{ 'title.delete_bookmark'|trans }} {{ bookmark.url }}
-    </h1>
+    {#<h1>#}
+        {#{{ 'title.delete_bookmark'|trans }} {{ bookmark.url }}#}
+    {#</h1>#}
     <p>  {{ 'question.delete'|trans }}?</p>
     {#{% if bookmark is defined %}#}
 {##}
@@ -29,5 +29,16 @@
         {#</div>#}
         {#{{ form_end(form) }}#}
     {#{% endif %}#}
-    {{ include('_form.html.twig', {'url': 'bookmark_delete', 'id': bookmark.id}) }}
+
+    {#{{ include('_form.html.twig', {'url': 'bookmark_delete', 'id': bookmark.id}) }}#}
+
+    {% include 'default/_form.html.twig' with {
+    page_title: 'title.delete_bookmark',
+    page_title_param: {'%id%': bookmark.id},
+    attr: {
+    method: 'post',
+    action: url('bookmark_delete', {'id': bookmark.id}),
+    },
+    back_to_list_path: 'bookmark_index',
+    } %}
 {% endblock %}

@@ -7,9 +7,8 @@
 {% block body %}
 
     <h1>
-        {{ 'title.delete_tag'|trans }} {{ tag.name }}
+        {{ 'question.delete'|trans }} {{ tag.name }}?
     </h1>
-    <p>  {{ 'question.delete'|trans }}?</p>
     {% if tag is defined %}
 
         {#{{ form_start(form, { method: 'post', action: url('tag_delete', {'id': tag.id}) }) }}#}
@@ -31,8 +30,21 @@
         {#</div>#}
         {#{{ form_end(form) }}#}
 
-        {{ include('_form.html.twig', {'url': 'tag_delete', 'id': tag.id}) }}
+
+        {#{{ include('_form.html.twig', {'url': 'tag_delete', 'id': tag.id}) }}#}
+
+        {% include 'default/_form.html.twig' with {
+        page_title: 'title.delete_tag',
+        page_title_param: {'%id%': tag.id},
+        attr: {
+        method: 'post',
+        action: url('tag_delete', {'id': tag.id}),
+        },
+        back_to_list_path: 'tag_index',
+        } %}
+
     {% endif %}
+
 
 {% endblock %}
 

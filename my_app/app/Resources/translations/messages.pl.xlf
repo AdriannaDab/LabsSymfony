@@ -64,15 +64,15 @@
              </trans-unit>
              <trans-unit id="message.created_successfully">
                 <source>message.created_successfully</source>
-                <target>Dodano tag</target>
+                <target>Dodano</target>
             </trans-unit>
              <trans-unit id="message.deleted_successfully">
                 <source>message.deleted_successfully</source>
-                <target>Usunięto tag</target>
+                <target>Usunięto</target>
             </trans-unit>
             <trans-unit id="message.edited_successfully">
                 <source>message.edited_successfully</source>
-                <target>Poprawiono tag</target>
+                <target>Poprawiono</target>
             </trans-unit>
             <trans-unit id="message.empty_list">
                 <source>message.empty_list</source>

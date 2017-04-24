@@ -36,8 +36,15 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     form:
-        resources: ['bootstrap_3_layout.html.twig']
+        resources: ['bootstrap_3_layout.html.twig', 'form/form_errors.html.twig']
             # resources: ['bootstrap_3_horizontal_layout.html.twig']
+
+# Doctrine Extensions Configuration
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        default:
+            timestampable: true
 
 # Doctrine Configuration
 doctrine:

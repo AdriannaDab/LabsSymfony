@@ -11,6 +11,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 use AppBundle\Form\BookmarkType;
 
 
@@ -133,7 +135,7 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
 
         if ($form->isSubmitted() && $form->isValid()) { //jesli jest wyslany i poprawny
             $this->get('app.repository.bookmark')->save($bookmark);//to zapiszemy
-            $this->addFlash('success_created', 'message.created_successfully');//pojawia sie flash success
+            $this->addFlash('success', 'message.created_successfully');//pojawia sie flash success
 
             return $this->redirectToRoute('bookmark_index');
         }
@@ -169,7 +171,7 @@ class BookmarkController extends Controller //rozszerza bazowy kontroler
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->get('app.repository.bookmark')->save($bookmark);
-            $this->addFlash('success_edited', 'message.edited_successfully');
+            $this->addFlash('success', 'message.edited_successfully');
 
             return $this->redirectToRoute('bookmark_index');
         }

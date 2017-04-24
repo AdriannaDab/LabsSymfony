@@ -6,9 +6,9 @@
 
 {% block body %}
 
-    <h1>
-        {{ 'title.edit_tag'|trans }}
-    </h1>
+    {#<h1>#}
+        {#{{ ''|trans }}#}
+    {#</h1>#}
 
     {#{% if tag is defined and tag|length %}#}
         {#{{ include('tag/_form.html.twig', {#}
@@ -35,6 +35,17 @@
 
         {#{{ form_end(form) }}#}
 
-    {{ include('_form.html.twig', {'url': 'tag_edit', 'id': tag.id}) }}
+
+    {#{{ include('_form.html.twig', {'url': 'tag_edit', 'id': tag.id}) }}#}
+
+    {% include 'default/_form.html.twig' with {
+    page_title: 'title.edit_tag',
+    page_title_param: {'%id%': tag.id},
+    attr: {
+    method: 'post',
+    action: url('tag_edit', {'id': tag.id}),
+    },
+    back_to_list_path: 'tag_index',
+    } %}
 
 {% endblock %}

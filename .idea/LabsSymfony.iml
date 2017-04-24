@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/behat/transliterator" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/cilex/cilex" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/cilex/console-service-provider" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/components/jquery" />
@@ -20,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/escapestudios/symfony2-coding-standard" />
+      <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/gedmo/doctrine-extensions" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/herrera-io/json" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/herrera-io/phar-update" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/incenteev/composer-parameter-handler" />
@@ -50,6 +52,7 @@
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/sensio/generator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/sensiolabs/security-checker" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/stof/doctrine-extensions-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/symfony/assetic-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/my_app/vendor/symfony/monolog-bundle" />
@@ -102,6 +105,7 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/my_app/vendor/behat/transliterator" />
           <root url="file://$MODULE_DIR$/my_app/vendor/cilex/cilex" />
           <root url="file://$MODULE_DIR$/my_app/vendor/cilex/console-service-provider" />
           <root url="file://$MODULE_DIR$/my_app/vendor/components/jquery" />
@@ -120,6 +124,7 @@
           <root url="file://$MODULE_DIR$/my_app/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/my_app/vendor/erusev/parsedown" />
           <root url="file://$MODULE_DIR$/my_app/vendor/escapestudios/symfony2-coding-standard" />
+          <root url="file://$MODULE_DIR$/my_app/vendor/gedmo/doctrine-extensions" />
           <root url="file://$MODULE_DIR$/my_app/vendor/herrera-io/json" />
           <root url="file://$MODULE_DIR$/my_app/vendor/herrera-io/phar-update" />
           <root url="file://$MODULE_DIR$/my_app/vendor/incenteev/composer-parameter-handler" />
@@ -150,6 +155,7 @@
           <root url="file://$MODULE_DIR$/my_app/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/my_app/vendor/sensiolabs/security-checker" />
           <root url="file://$MODULE_DIR$/my_app/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$MODULE_DIR$/my_app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/my_app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/my_app/vendor/symfony/assetic-bundle" />
           <root url="file://$MODULE_DIR$/my_app/vendor/symfony/monolog-bundle" />
@@ -182,6 +188,7 @@
           <root url="file://$MODULE_DIR$/my_app/vendor/zetacomponents/document" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/my_app/vendor/behat/transliterator" />
           <root url="file://$MODULE_DIR$/my_app/vendor/cilex/cilex" />
           <root url="file://$MODULE_DIR$/my_app/vendor/cilex/console-service-provider" />
           <root url="file://$MODULE_DIR$/my_app/vendor/components/jquery" />
@@ -200,6 +207,7 @@
           <root url="file://$MODULE_DIR$/my_app/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/my_app/vendor/erusev/parsedown" />
           <root url="file://$MODULE_DIR$/my_app/vendor/escapestudios/symfony2-coding-standard" />
+          <root url="file://$MODULE_DIR$/my_app/vendor/gedmo/doctrine-extensions" />
           <root url="file://$MODULE_DIR$/my_app/vendor/herrera-io/json" />
           <root url="file://$MODULE_DIR$/my_app/vendor/herrera-io/phar-update" />
           <root url="file://$MODULE_DIR$/my_app/vendor/incenteev/composer-parameter-handler" />
@@ -230,6 +238,7 @@
           <root url="file://$MODULE_DIR$/my_app/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/my_app/vendor/sensiolabs/security-checker" />
           <root url="file://$MODULE_DIR$/my_app/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$MODULE_DIR$/my_app/vendor/stof/doctrine-extensions-bundle" />
           <root url="file://$MODULE_DIR$/my_app/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/my_app/vendor/symfony/assetic-bundle" />
           <root url="file://$MODULE_DIR$/my_app/vendor/symfony/monolog-bundle" />

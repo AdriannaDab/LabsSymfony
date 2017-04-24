@@ -21,7 +21,7 @@ class DefaultController extends Controller
     public function helloAction($name)
     {
         return $this-> render(
-            'default/hello.html.twig',
+            'hello/hello.html.twig',
             array(
                 'name' => $name
             )

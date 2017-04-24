@@ -9,6 +9,8 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use AppBundle\Entity\Tag;
 /**
@@ -94,6 +96,21 @@ class BookmarkType extends AbstractType
 
         $builder->get('tags')->addModelTransformer(
             new TagTransformer($this->tagRepository)
+        );
+
+        $builder->addEventListener(
+            FormEvents::PRE_SUBMIT,
+            function (FormEvent $event) {
+                $form = $event->getForm();
+                $data = $event->getData();
+
+                if ($form->getNormData()->getId()){
+
+                    $data['url'] = $form->getNormData()->getUrl();
+                    $event->setData($data);
+                }
+            }
+
         );
     }
     /**

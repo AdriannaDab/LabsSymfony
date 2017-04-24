@@ -4,6 +4,8 @@
 
     <h1>{{ 'bookmarks'|trans }}</h1>
 
+
+
     {% if bookmarks is defined and bookmarks|length %}
 
         {% for bookmark in bookmarks %}
@@ -41,6 +43,7 @@
                 {{ 'action.add'|trans }}
             </a>
         </div>
+
 
         {% if bookmarks.haveToPaginate %}
             <div class="navigation text-center">
